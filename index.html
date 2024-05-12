@@ -18,6 +18,10 @@
         <input type="number" name="num2" placeholder="Enter second number">
         <button type="submit">Subtract</button>
     </form>
-    <div id="result"></div>
+    <div id="result">
+        {% if result %}
+            Result: {{ result }}
+        {% endif %}
+    </div>
 </body>
 </html>
