@@ -8,18 +8,14 @@
 </head>
 <body>
     <h1>Simple Calculator</h1>
-    <form action="/add" method="post">
+    <form action="/" method="post">
         <input type="number" name="num1" placeholder="Enter first number">
         <input type="number" name="num2" placeholder="Enter second number">
-        <button type="submit">Add</button>
-    </form>
-    <form action="/subtract" method="post">
-        <input type="number" name="num1" placeholder="Enter first number">
-        <input type="number" name="num2" placeholder="Enter second number">
-        <button type="submit">Subtract</button>
+        <button type="submit" name="operation" value="add">Add</button>
+        <button type="submit" name="operation" value="subtract">Subtract</button>
     </form>
     <div id="result">
-        {% if result %}
+        {% if result is not none %}
             Result: {{ result }}
         {% endif %}
     </div>
